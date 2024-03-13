@@ -116,10 +116,10 @@ public class FarmManagementApp extends JFrame implements ActionListener {
         CropMarketInformation cropBought = new CropMarketInformation(getCommodityPrice(commodity), commodity);
         Customer customer = new Customer(name, cropBought, quantity);
 
-        // Calculate total spent by the customer
         double totalSpent = customer.calculateTotalSpent();
 
-        // Display customer details and total spent
+        
+
         JOptionPane.showMessageDialog(this,
                 "Customer Name: " + customer.getName() + "\n" +
                         "Crop Bought: " + customer.getCropBought().getCropType() + "\n" +
@@ -128,12 +128,12 @@ public class FarmManagementApp extends JFrame implements ActionListener {
     }
 
     private void displayWeatherInformation() {
-        // Implement weather information display here
+        
         JOptionPane.showMessageDialog(this, "Weather information not available yet.");
     }
 
     private double getCommodityPrice(String commodity) {
-        // Dummy method to retrieve commodity price based on commodity type
+        
         switch (commodity) {
             case "Maize":
                 return 200;
@@ -142,7 +142,7 @@ public class FarmManagementApp extends JFrame implements ActionListener {
             case "Potatoes":
                 return 250;
             default:
-                return 0; // Default price if commodity is not found
+                return 0; 
         }
     }
 
